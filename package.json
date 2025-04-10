@@ -1,7 +1,7 @@
 {
   "name": "ihero-challenge-evts",
   "version": "1.0.0",
-  "description": "An randomic events sender for iHero-Challenge",
+  "description": "A base application for iHero challenge that emit random events to be handle",
   "homepage": "",
   "main": "index.js",
   "type": "module",
