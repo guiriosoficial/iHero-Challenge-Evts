@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client Example</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const socket = io('http://localhost:3000');
+
+            // Conectar ao servidor
+            socket.on('connect', () => {
+              console.log('Conectado ao servidor WebSocket.');
+
+              socket.emit('events', 'evento do front')
+
+              socket.on('event', (data) => {
+                console.log('EVENTO RECEBIDO:', data);
+              })
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Socket.IO Client Example</h1>
+    <p>Verifique o console do navegador para mensagens.</p>
+</body>
+</html>
