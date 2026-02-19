@@ -1,4 +1,2 @@
-import connection from './connection';
-import events from './events';
-
-export { connection, events };
+export { connection } from './connection'
+export { events } from './events'

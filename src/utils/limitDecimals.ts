@@ -1,5 +1,7 @@
-function limitDecimals(number: number, decimals: number): number {
-  return parseFloat(number.toFixed(decimals));
+export function limitDecimals(
+  number: number,
+  decimals: number
+): number {
+  const fixedNumber = number.toFixed(decimals)
+  return parseFloat(fixedNumber)
 }
-
-export default limitDecimals;

@@ -1,11 +1,10 @@
-/* eslint-disable one-var */
-import { connection, events } from './events/index';
+import { connection, events } from './events';
 
 import { Server } from 'socket.io';
 import { createServer } from 'node:http';
 import { log } from 'node:console';
 
-const DEFAULT_PORT = 3001;
+const DEFAULT_PORT = 3000;
 const PORT = process.env.PORT ?? DEFAULT_PORT;
 const OPTIONS = {
   cors: {

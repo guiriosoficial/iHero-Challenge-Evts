@@ -1,4 +1,2 @@
-import Event from './event';
-import Location from './location';
-
-export { Event, Location };
+export { Event } from './event'
+export { Location } from './location'

@@ -1,17 +1,15 @@
-import { randomNumber } from '.';
+import { randomNumber } from '.'
 
-function randomInterval(
+export function randomInterval(
   callback: () => void,
   minInterval: number,
-  maxInterval: number,
+  maxInterval: number
 ): void {
   const loop = (): void => {
-    callback();
-    const interval = randomNumber(minInterval, maxInterval);
-    setTimeout(loop, interval);
-  };
+    callback()
+    const interval = randomNumber(minInterval, maxInterval)
+    setTimeout(loop, interval)
+  }
 
-  loop();
+  loop()
 }
-
-export default randomInterval;
